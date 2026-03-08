@@ -25,46 +25,32 @@ Ensure you have Python 3.x installed along with the following dependencies:
 ```bash
 pip install opencv-python numpy matplotlib scipy
 
-```
+# Bezier-Curve-Parameter-Reading-With-CV 🎨
 
-### 2. Usage
-
-Modify the image path in the script and run:
-
-```python
-vectorize_image_bezier("your_image.png")
-
-```
+A Python tool to convert bitmap images into smooth cubic Bezier curves using OpenCV and Scipy.
 
 ---
 
 ## 📊 Showcases (Original vs. Vectorized)
 
 | Input Bitmap (Original) | Vectorized Output (Rendered) |
-| --- | --- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| :---: | :---: |
+| ![Barca](image-to-bezier-vectorizer/assets/Barca.png) | ![Barca Vector](image-to-bezier-vectorizer/assets/rendered_outputs/Barca_vector.png) |
+| ![Dance](image-to-bezier-vectorizer/assets/dance.png) | ![Dance Vector](image-to-bezier-vectorizer/assets/rendered_outputs/dance_vector.png) |
+| ![Note](image-to-bezier-vectorizer/assets/note.png) | ![Note Vector](image-to-bezier-vectorizer/assets/rendered_outputs/note_vector.png) |
+| ![Lala Land](image-to-bezier-vectorizer/assets/lala_land.png) | ![Lala Land Vector](image-to-bezier-vectorizer/assets/rendered_outputs/lala_land_vector.png) |
 
 ---
 
-## 🛠️ How It Works
 
-The vectorization pipeline follows a rigorous mathematical approach:
 
-1. **Preprocessing**: Converts images to grayscale and applies Otsu's thresholding for binary segmentation.
-2. **Segmentation**: Divides continuous contours into discrete segments based on curvature and corner detection.
-3. **Parameterization**: Uses **Chord-Length Parameterization** to map spatial coordinates to the $t \in [0, 1]$ parameter space.
-4. **Optimization**: Solves the objective function $\min \sum \|B(t) - P\|^2$ for each segment to find the best-fitting Bezier parameters.
 
----
 
 ## 📜 License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
-Developed with ❤️ by [Phil-1030](https://www.google.com/search?q=https://github.com/Phil-1030)
+Developed by [Phil-1030](https://www.google.com/search?q=https://github.com/Phil-1030)
 
 ```
 
